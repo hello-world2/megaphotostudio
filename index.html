@@ -147,25 +147,35 @@ section{
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+/* Gallery grid */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust number of columns */
     gap: 15px;
     margin-top: 30px;
 }
 
+/* Keep all images same size */
 .gallery-grid img {
-    width: 100%;       /* Full width of its container */
-    height: auto;      /* Maintain aspect ratio */
-    object-fit: cover; /* Keep images nicely cropped */
+    width: 250px;      /* fixed width */
+    height: 250px;     /* fixed height */
+    object-fit: cover; /* crop images to fit box */
     border-radius: 10px;
     transition: 0.3s;
 }
 
+/* Hover effect */
 .gallery-grid img:hover {
     transform: scale(1.05);
-    box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
+
+/* Make grid responsive: center items on smaller screens */
+@media(max-width:768px){
+    .gallery-grid {
+        justify-content: center; /* center images */
+    }
+}
+
 
 /* Buttons */
 .btn{
@@ -458,6 +468,7 @@ function handleOrderSubmit(event) {
 
 </body>
 </html>
+
 
 
 
