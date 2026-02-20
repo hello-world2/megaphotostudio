@@ -340,45 +340,49 @@ logo stamp design, online form services, online payment services, photocopy and 
 </div>
 </section>
 
-<section id="booking" class="services">
-<h2>Book Photography Service</h2>
-<form action="https://formsubmit.co/prasantmagar1997@gmail.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Booking - Mega Photo Studio">
-<input type="text" name="Name" placeholder="Full Name" required>
-<input type="tel" name="Phone" placeholder="Phone Number" required>
-<select name="Service" required>
-<option>Wedding Photography</option>
-<option>Birthday Photography</option>
-<option>Party/Event Coverage</option>
-<option>Videography</option>
-</select>
-<input type="date" name="Event Date" required>
-<input type="text" name="Event Location" placeholder="Event Location" required>
-<button type="button" onclick="sendBookingWhatsApp()">Submit Booking</button>
-</form>
-</section>
+<form id="bookingForm" action="https://formsubmit.co/prasantmagar1997@gmail.com" method="POST" onsubmit="handleBookingSubmit(event)">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Booking - Mega Photo Studio">
 
-<section id="order">
-<h2>Order Printing & Designing</h2>
-<form action="https://formsubmit.co/katarimega@gmail.com" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Order - Mega Photo Studio">
-<input type="text" name="Name" placeholder="Full Name" required>
-<input type="tel" name="Phone" placeholder="Phone Number" required>
-<select name="Order Type" required>
-<option>Photo Frame</option>
-<option>Flex Banner</option>
-<option>Logo Stamp</option>
-<option>Color Printing</option>
-<option>Passport-size Photo</option>
-<option>Photocopy</option>
-</select>
-<textarea name="Order Details" placeholder="Write Order Details Here..." required></textarea>
-<input type="file" name="attachment">
-<button type="button" onclick="sendOrderWhatsApp()">Submit Order</button>
+  <input type="text" name="Name" placeholder="Full Name" required>
+  <input type="tel" name="Phone" placeholder="Phone Number" required>
+
+  <select name="Service" required>
+    <option>Wedding Photography</option>
+    <option>Birthday Photography</option>
+    <option>Party/Event Coverage</option>
+    <option>Videography</option>
+  </select>
+
+  <input type="date" name="Event Date" required>
+  <input type="text" name="Event Location" placeholder="Event Location" required>
+
+  <button type="submit">Submit Booking</button>
 </form>
-</section>
+
+
+<form id="orderForm" action="https://formsubmit.co/katarimega@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="handleOrderSubmit(event)">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Order - Mega Photo Studio">
+
+  <input type="text" name="Name" placeholder="Full Name" required>
+  <input type="tel" name="Phone" placeholder="Phone Number" required>
+
+  <select name="Order Type" required>
+    <option>Photo Frame</option>
+    <option>Flex Banner</option>
+    <option>Logo Stamp</option>
+    <option>Color Printing</option>
+    <option>Passport-size Photo</option>
+    <option>Photocopy</option>
+  </select>
+
+  <textarea name="Order Details" placeholder="Write Order Details Here..." required></textarea>
+  <input type="file" name="attachment">
+
+  <button type="submit">Submit Order</button>
+</form>
+
 
 <section id="contact" class="contact">
 <h2>Contact Us</h2>
@@ -419,3 +423,4 @@ function sendOrderWhatsApp() {
 </script>
 </body>
 </html>
+
