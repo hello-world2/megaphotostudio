@@ -26,6 +26,7 @@
 body{
     line-height:1.6;
     scroll-behavior: smooth;
+    background:#ebf6f5;
 }
 
 /* Header */
@@ -193,6 +194,9 @@ section{
 }
 
 /* Forms */
+.section1{
+    background:#ebf6f5;
+}
 form{
     max-width:600px;
     margin:20px auto;
@@ -356,8 +360,8 @@ logo stamp design, online form services, online payment services, photocopy and 
 <img src="gallery8.jpeg" alt="Studio">
 </div>
 </section>
-
-<form id="bookingForm" action="https://formsubmit.co/prasantmagar1997@gmail.com" method="POST" onsubmit="handleBookingSubmit(event)">
+<section id="section1">
+<form id="bookingForm" action="https://formsubmit.co/katarimega@gmail.com" method="POST" onsubmit="handleBookingSubmit(event)">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="New Booking - Mega Photo Studio">
 
@@ -399,7 +403,7 @@ logo stamp design, online form services, online payment services, photocopy and 
 
   <button type="submit" onclick="handleOrderSubmit()">Submit Order</button>
 </form>
-
+</section>
 
 <section id="contact" class="contact">
 <h2>Contact Us</h2>
@@ -469,6 +473,7 @@ function handleOrderSubmit(event) {
 
 </body>
 </html>
+
 
 
 
