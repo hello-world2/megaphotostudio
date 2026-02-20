@@ -152,10 +152,11 @@ section{
 /* Gallery grid */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust number of columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    justify-content: center;   /* Centers whole grid */
     gap: 15px;
-    margin-top: 30px;
 }
+
 
 /* Keep all images same size */
 .gallery-grid img {
@@ -473,6 +474,7 @@ function handleOrderSubmit(event) {
 
 </body>
 </html>
+
 
 
 
