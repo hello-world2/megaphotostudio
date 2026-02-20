@@ -9,37 +9,37 @@
 
 <title>Mega Photo Studio | Katari-03, Udayapur</title>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 <style>
+/* Reset & fonts */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Montserrat', sans-serif;
 }
-
 body{
     line-height:1.6;
+    scroll-behavior: smooth;
 }
 
+/* Header */
 header{
     background:#ebf6f5;
     color:black;
     padding:20px;
     text-align:center;
 }
-.main-header{
-    background:#ebf6f5;
-    color:black;
-    padding:15px 20px;
-}
-
 .logo-container{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:15px;
 }
-
 .logo-container img{
     width:70px;
     height:70px;
@@ -47,37 +47,38 @@ header{
     border-radius:50%;
 }
 
-
+/* Navigation */
 nav{
     background:black;
     padding:12px;
     text-align:center;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
-
 nav a{
     color:white;
     text-decoration:none;
     margin:0 15px;
-    font-weight:bold;
+    font-weight:600;
+    transition:0.3s;
 }
-
 nav a:hover{
-    color:orange;
+    color:#ff7f50;
 }
 
+/* Hero */
 .hero{
-    position: relative;
-    background:url('service.jpg') no-repeat center center;
-    background-size:cover;
-    height:60vh;
+    position:relative;
+    background:url('service.jpg') center/cover no-repeat;
+    height:100vh;
     min-height:300px;
-    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
+    color:white;
 }
-
 .hero::after{
     content:"";
     position:absolute;
@@ -87,122 +88,155 @@ nav a:hover{
     height:100%;
     background:rgba(0,0,0,0.6);
 }
-
 .hero > div{
     position:relative;
     z-index:2;
     padding:0 20px;
 }
-
 .hero h2{
-    font-size:clamp(24px,5vw,38px);
+    font-size:clamp(28px,6vw,48px);
+    margin-bottom:15px;
+}
+.hero p{
+    font-size:clamp(16px,3vw,22px);
+    margin-bottom:20px;
+}
+.hero .btn{
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:50px;
+    text-decoration:none;
+    background:#ff7f50;
+    color:white;
+    transition:0.3s;
+}
+.hero .btn:hover{
+    background:#ff6333;
 }
 
-
-#about {
-    background:#ebf6f5;
-    color: black;
-}
-
-#gallery{
+/* Sections */
+section{
     padding:50px 20px;
-    background:#ebf6f5;
     text-align:center;
 }
+#about, .services, #gallery, #order, .contact{
+    background:#ebf6f5;
+    color:black;
+}
 
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-box {
+  flex: 1 1 260px;
+  max-width: 300px;
+  margin: 10px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Gallery */
 .gallery-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
     gap:15px;
     margin-top:30px;
 }
-
 .gallery-grid img{
     width:100%;
     height:250px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:15px;
     transition:0.3s;
 }
-
 .gallery-grid img:hover{
     transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
 }
 
-
+/* Buttons */
 .btn{
     display:inline-block;
-    padding:10px 20px;
-    background:orange;
+    padding:12px 25px;
+    background:#ff7f50;
     color:white;
     text-decoration:none;
-    border-radius:5px;
-    margin-top:15px;
+    border-radius:50px;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#ff6333;
 }
 
-section{
-    padding:50px 20px;
-    text-align:center;
-}
-
-.services{
-    background:#ebf6f5;
-}
-
-.service-box{
-    display:inline-block;
-    width:260px;
-    margin:15px;
-    padding:20px;
-    background:#ebf6f5;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
+/* Forms */
 form{
     max-width:600px;
     margin:20px auto;
-    background:#ebf6f5;
+    background:white;
     padding:20px;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
-
 input, select, textarea{
     width:100%;
-    padding:10px;
+    padding:12px;
     margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    transition:0.3s;
 }
-
+input:focus, select:focus, textarea:focus{
+    border-color:#ff7f50;
+    outline:none;
+}
 button{
-    padding:12px 20px;
-    background:orange;
-    color:white;
+    padding:14px 25px;
+    background:#ff7f50;
+    border-radius:50px;
+    font-size:16px;
     border:none;
-    border-radius:5px;
     cursor:pointer;
+    transition:0.3s;
 }
-
 button:hover{
-    background:#ff8c00;
-}
-#order{
-    background:#ebf6f5;
+    background:#ff6333;
 }
 
-.contact{
-    background:#ebf6f5;
-    color:black;
+/* Contact */
+.contact p{
+    margin-bottom:10px;
 }
 
+/* Footer */
 footer{
     background:black;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
+}
+footer .social-icons a{
+    color:white;
+    margin:0 10px;
+    font-size:20px;
+    transition:0.3s;
+}
+footer .social-icons a:hover{
+    color:#ff7f50;
 }
 
-/* WhatsApp Button */
+/* WhatsApp button */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -219,14 +253,20 @@ footer{
 @media(max-width:768px){
     .service-box{
         width:90%;
+        margin:20px auto;
+    }
+    .hero h2{
+        font-size:clamp(24px,7vw,36px);
+    }
+    .hero p{
+        font-size:clamp(14px,4vw,18px);
     }
 }
 </style>
 </head>
-
 <body>
 
-<header class="main-header">
+<header>
     <div class="logo-container">
         <img src="logo.jpeg" alt="Mega Photo Studio Logo">
         <div>
@@ -263,34 +303,32 @@ logo stamp design, online form services, online payment services, photocopy and 
 </section>
 
 <section id="services" class="services">
-<h2>Our Services</h2>
-
-<div class="service-box">
-<h3>Photography/ Videography</h3>
-<p>Wedding, Birthday, Party</p>
-</div>
-
-<div class="service-box">
-<h3>Designing</h3>
-<p>Photo Frame, Flex Banner, Logo Stamp</p>
-</div>
-
-<div class="service-box">
-<h3>Online Services</h3>
-<p>Online Form Fill-up & Online Payment</p>
-</div>
-
-<div class="service-box">
-<h3>Printing</h3>
-<p>Photocopy, Color Printing, ID Card Print</p>
-</div>
-
+  <h2 style="width:100%; text-align:center; margin-bottom:30px;">Our Services</h2>
+  
+  <div class="services-container">
+    <div class="service-box">
+      <h3>Photography/ Videography</h3>
+      <p>Wedding, Birthday, Party</p>
+    </div>
+    <div class="service-box">
+      <h3>Designing</h3>
+      <p>Photo Frame, Flex Banner, Logo Stamp</p>
+    </div>
+    <div class="service-box">
+      <h3>Online Services</h3>
+      <p>Online Form Fill-up & Online Payment</p>
+    </div>
+    <div class="service-box">
+      <h3>Printing</h3>
+      <p>Photocopy, Color Printing, ID Card Print</p>
+    </div>
+  </div>
 </section>
+
+
 <section id="gallery">
 <h2>Our Gallery</h2>
-
 <div class="gallery-grid">
-
 <img src="gallery1.jpeg" alt="Studio">
 <img src="gallery2.jpeg" alt="Studio">
 <img src="gallery3.jpeg" alt="Studio">
@@ -299,48 +337,35 @@ logo stamp design, online form services, online payment services, photocopy and 
 <img src="gallery6.jpeg" alt="Studio">
 <img src="gallery7.jpeg" alt="Studio">
 <img src="gallery8.jpeg" alt="Studio">
-
 </div>
 </section>
 
-
-<!-- BOOKING FORM -->
 <section id="booking" class="services">
 <h2>Book Photography Service</h2>
-
 <form action="https://formsubmit.co/prasantmagar1997@gmail.com" method="POST">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Booking - Mega Photo Studio">
-
 <input type="text" name="Name" placeholder="Full Name" required>
 <input type="tel" name="Phone" placeholder="Phone Number" required>
-
 <select name="Service" required>
 <option>Wedding Photography</option>
 <option>Birthday Photography</option>
 <option>Party/Event Coverage</option>
 <option>Videography</option>
 </select>
-
 <input type="date" name="Event Date" required>
 <input type="text" name="Event Location" placeholder="Event Location" required>
-
 <button type="button" onclick="sendBookingWhatsApp()">Submit Booking</button>
-
 </form>
 </section>
 
-<!-- ORDER FORM -->
 <section id="order">
 <h2>Order Printing & Designing</h2>
-
 <form action="https://formsubmit.co/katarimega@gmail.com" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Order - Mega Photo Studio">
-
 <input type="text" name="Name" placeholder="Full Name" required>
 <input type="tel" name="Phone" placeholder="Phone Number" required>
-
 <select name="Order Type" required>
 <option>Photo Frame</option>
 <option>Flex Banner</option>
@@ -349,13 +374,9 @@ logo stamp design, online form services, online payment services, photocopy and 
 <option>Passport-size Photo</option>
 <option>Photocopy</option>
 </select>
-
 <textarea name="Order Details" placeholder="Write Order Details Here..." required></textarea>
-
 <input type="file" name="attachment">
-
 <button type="button" onclick="sendOrderWhatsApp()">Submit Order</button>
-
 </form>
 </section>
 
@@ -368,9 +389,14 @@ logo stamp design, online form services, online payment services, photocopy and 
 
 <footer>
 <p>© 2026 Mega Photo Studio | All Rights Reserved</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
 </footer>
 
-<a href="https://wa.me/9779808991373" class="whatsapp">💬</a>
+<a href="https://wa.me/9779808991373" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
 <script>
 function sendBookingWhatsApp() {
@@ -379,34 +405,17 @@ function sendBookingWhatsApp() {
     var service = document.querySelector('#booking select[name="Service"]').value;
     var date = document.querySelector('#booking input[name="Event Date"]').value;
     var location = document.querySelector('#booking input[name="Event Location"]').value;
-
-    var message = "📸 New Booking - Mega Photo Studio%0A%0A"
-        + "Name: " + name + "%0A"
-        + "Phone: " + phone + "%0A"
-        + "Service: " + service + "%0A"
-        + "Date: " + date + "%0A"
-        + "Location: " + location;
-
-    window.open("https://wa.me/9779808991373?text=" + message, "_blank");
+    var message = `📸 New Booking - Mega Photo Studio%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate: ${date}%0ALocation: ${location}`;
+    window.open("https://wa.me/9779808991373?text=" + message,"_blank");
 }
-
 function sendOrderWhatsApp() {
     var name = document.querySelector('#order input[name="Name"]').value;
     var phone = document.querySelector('#order input[name="Phone"]').value;
     var orderType = document.querySelector('#order select[name="Order Type"]').value;
     var details = document.querySelector('#order textarea[name="Order Details"]').value;
-
-    var message = "🖨 New Order - Mega Photo Studio%0A%0A"
-        + "Name: " + name + "%0A"
-        + "Phone: " + phone + "%0A"
-        + "Order: " + orderType + "%0A"
-        + "Details: " + details;
-
-    window.open("https://wa.me/9779808991373?text=" + message, "_blank");
+    var message = `🖨 New Order - Mega Photo Studio%0A%0AName: ${name}%0APhone: ${phone}%0AOrder: ${orderType}%0ADetails: ${details}`;
+    window.open("https://wa.me/9779808991373?text=" + message,"_blank");
 }
 </script>
-
 </body>
 </html>
-
-
