@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mega Photo Studio | Katari-03, Udayapur</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+}
+
+header{
+    background:#ebf6f5;
+    color:black;
+    padding:20px;
+    text-align:center;
+}
+.main-header{
+    background:#ebf6f5;
+    color:black;
+    padding:15px 20px;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+}
+
+.logo-container img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+
+nav{
+    background:black;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:orange;
+}
+
+.hero{
+    background:url('images/service.jpg') no-repeat center center/cover;
+    height:400px;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background-blend-mode:darken;
+    background-color:rgba(0,0,0,0.6);
+}
+
+.hero h2{
+    font-size:38px;
+}
+#about {
+    background:#ebf6f5;
+    color: black;
+}
+
+#gallery{
+    padding:50px 20px;
+    background:#ebf6f5;
+    text-align:center;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+    margin-top:30px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:orange;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:15px;
+}
+
+section{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.services{
+    background:#ebf6f5;
+}
+
+.service-box{
+    display:inline-block;
+    width:260px;
+    margin:15px;
+    padding:20px;
+    background:#ebf6f5;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+form{
+    max-width:600px;
+    margin:20px auto;
+    background:#ebf6f5;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+}
+
+button{
+    padding:12px 20px;
+    background:orange;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff8c00;
+}
+#order{
+    background:#ebf6f5;
+}
+
+.contact{
+    background:#ebf6f5;
+    color:black;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* WhatsApp Button */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .service-box{
+        width:90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="logo-container">
+        <img src="images/logo.jpeg" alt="Mega Photo Studio Logo">
+        <div>
+            <h1>Mega Photo Studio, Katari</h1>
+            <p>Capturing Your Precious Moments</p>
+        </div>
+    </div>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Booking</a>
+<a href="#order">Order</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+<div>
+<h2>Wedding | Birthday | Party | Printing</h2>
+<p>Katari-03, Udayapur, Nepal</p>
+<a href="tel:9808991373" class="btn">Call Now</a>
+</div>
+</div>
+
+<section id="about">
+<h2>About Us</h2>
+<p>
+Mega Photo Studio is a professional photography and digital service center located in Katari-03, Udayapur. 
+We provide wedding photography, birthday events, party coverage, photo framing, flex designing, 
+logo stamp design, online form services, online payment services, photocopy and printing — all in one place.
+</p>
+</section>
+
+<section id="services" class="services">
+<h2>Our Services</h2>
+
+<div class="service-box">
+<h3>Photography/ Videography</h3>
+<p>Wedding, Birthday, Party</p>
+</div>
+
+<div class="service-box">
+<h3>Designing</h3>
+<p>Photo Frame, Flex Banner, Logo Stamp</p>
+</div>
+
+<div class="service-box">
+<h3>Online Services</h3>
+<p>Online Form Fill-up & Online Payment</p>
+</div>
+
+<div class="service-box">
+<h3>Printing</h3>
+<p>Photocopy, Color Printing, ID Card Print</p>
+</div>
+
+</section>
+<section id="gallery">
+<h2>Our Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="images/gallery1.jpeg" alt="Studio">
+<img src="images/gallery2.jpeg" alt="Studio">
+<img src="images/gallery3.jpeg" alt="Studio">
+<img src="images/gallery4.jpeg" alt="Studio">
+<img src="images/gallery5.jpeg" alt="Studio">
+<img src="images/gallery6.jpeg" alt="Studio">
+<img src="images/gallery7.jpeg" alt="Studio">
+<img src="images/gallery8.jpeg" alt="Studio">
+
+</div>
+</section>
+
+
+<!-- BOOKING FORM -->
+<section id="booking" class="services">
+<h2>Book Photography Service</h2>
+
+<form action="https://formsubmit.co/katarimega@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Booking - Mega Photo Studio">
+
+<input type="text" name="Name" placeholder="Full Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+
+<select name="Service" required>
+<option>Wedding Photography</option>
+<option>Birthday Photography</option>
+<option>Party/Event Coverage</option>
+<option>Videography</option>
+</select>
+
+<input type="date" name="Event Date" required>
+<input type="text" name="Event Location" placeholder="Event Location" required>
+
+<button type="submit" onclick="sendBookingWhatsApp()">Submit Booking</button>
+</form>
+</section>
+
+<!-- ORDER FORM -->
+<section id="order">
+<h2>Order Printing & Designing</h2>
+
+<form action="https://formsubmit.co/katarimega@gmail.com" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Order - Mega Photo Studio">
+
+<input type="text" name="Name" placeholder="Full Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+
+<select name="Order Type" required>
+<option>Photo Frame</option>
+<option>Flex Banner</option>
+<option>Logo Stamp</option>
+<option>Color Printing</option>
+<option>Passport-size Photo</option>
+<option>Photocopy</option>
+</select>
+
+<textarea name="Order Details" placeholder="Write Order Details Here..." required></textarea>
+
+<input type="file" name="attachment">
+
+<button type="submit" onclick="sendOrderWhatsApp()">Submit Order</button>
+</form>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>Mega Photo Studio, Katari</p>
+<p>Katari-03, Udayapur, Nepal</p>
+<p>Phone: 9808991373</p>
+</section>
+
+<footer>
+<p>© 2026 Mega Photo Studio | All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/9779808991373" class="whatsapp">💬</a>
+
+<script>
+function sendBookingWhatsApp() {
+    var name = document.querySelector('#booking input[name="Name"]').value;
+    var phone = document.querySelector('#booking input[name="Phone"]').value;
+    var service = document.querySelector('#booking select[name="Service"]').value;
+    var date = document.querySelector('#booking input[name="Event Date"]').value;
+    var location = document.querySelector('#booking input[name="Event Location"]').value;
+
+    var message = "📸 New Booking - Mega Photo Studio%0A%0A"
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Service: " + service + "%0A"
+        + "Date: " + date + "%0A"
+        + "Location: " + location;
+
+    window.open("https://wa.me/9779808991373?text=" + message, "_blank");
+}
+
+function sendOrderWhatsApp() {
+    var name = document.querySelector('#order input[name="Name"]').value;
+    var phone = document.querySelector('#order input[name="Phone"]').value;
+    var orderType = document.querySelector('#order select[name="Order Type"]').value;
+    var details = document.querySelector('#order textarea[name="Order Details"]').value;
+
+    var message = "🖨 New Order - Mega Photo Studio%0A%0A"
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Order: " + orderType + "%0A"
+        + "Details: " + details;
+
+    window.open("https://wa.me/9779808991373?text=" + message, "_blank");
+}
+</script>
+
+</body>
+</html>
