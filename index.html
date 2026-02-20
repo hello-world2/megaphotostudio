@@ -403,24 +403,54 @@ logo stamp design, online form services, online payment services, photocopy and 
 <a href="https://wa.me/9779808991373" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
 <script>
-function sendBookingWhatsApp() {
-    var name = document.querySelector('#booking input[name="Name"]').value;
-    var phone = document.querySelector('#booking input[name="Phone"]').value;
-    var service = document.querySelector('#booking select[name="Service"]').value;
-    var date = document.querySelector('#booking input[name="Event Date"]').value;
-    var location = document.querySelector('#booking input[name="Event Location"]').value;
-    var message = `📸 New Booking - Mega Photo Studio%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate: ${date}%0ALocation: ${location}`;
-    window.open("https://wa.me/9779808991373?text=" + message,"_blank");
+function handleBookingSubmit(event) {
+    event.preventDefault(); // Stop normal submission
+    var form = event.target;
+
+    var name = form.querySelector('input[name="Name"]').value;
+    var phone = form.querySelector('input[name="Phone"]').value;
+    var service = form.querySelector('select[name="Service"]').value;
+    var date = form.querySelector('input[name="Event Date"]').value;
+    var location = form.querySelector('input[name="Event Location"]').value;
+
+    var message = "📸 New Booking - Mega Photo Studio%0A%0A"
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Service: " + service + "%0A"
+        + "Date: " + date + "%0A"
+        + "Location: " + location;
+
+    // Open WhatsApp
+    window.open("https://wa.me/9779808991373?text=" + message, "_blank");
+
+    // Submit to Gmail after 1 second
+    setTimeout(function(){ form.submit(); }, 1000);
 }
-function sendOrderWhatsApp() {
-    var name = document.querySelector('#order input[name="Name"]').value;
-    var phone = document.querySelector('#order input[name="Phone"]').value;
-    var orderType = document.querySelector('#order select[name="Order Type"]').value;
-    var details = document.querySelector('#order textarea[name="Order Details"]').value;
-    var message = `🖨 New Order - Mega Photo Studio%0A%0AName: ${name}%0APhone: ${phone}%0AOrder: ${orderType}%0ADetails: ${details}`;
-    window.open("https://wa.me/9779808991373?text=" + message,"_blank");
+
+function handleOrderSubmit(event) {
+    event.preventDefault();
+    var form = event.target;
+
+    var name = form.querySelector('input[name="Name"]').value;
+    var phone = form.querySelector('input[name="Phone"]').value;
+    var orderType = form.querySelector('select[name="Order Type"]').value;
+    var details = form.querySelector('textarea[name="Order Details"]').value;
+
+    var message = "🖨 New Order - Mega Photo Studio%0A%0A"
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Order: " + orderType + "%0A"
+        + "Details: " + details;
+
+    // Open WhatsApp
+    window.open("https://wa.me/9779808991373?text=" + message, "_blank");
+
+    // Submit to Gmail after 1 second
+    setTimeout(function(){ form.submit(); }, 1000);
 }
 </script>
+
 </body>
 </html>
+
 
