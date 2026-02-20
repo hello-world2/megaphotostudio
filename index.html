@@ -357,7 +357,7 @@ logo stamp design, online form services, online payment services, photocopy and 
   <input type="date" name="Event Date" required>
   <input type="text" name="Event Location" placeholder="Event Location" required>
 
-  <button type="submit">Submit Booking</button>
+  <button type="submit" onclick="handleBookingSubmit()">Submit Booking</button>
 </form>
 
 
@@ -380,7 +380,7 @@ logo stamp design, online form services, online payment services, photocopy and 
   <textarea name="Order Details" placeholder="Write Order Details Here..." required></textarea>
   <input type="file" name="attachment">
 
-  <button type="submit">Submit Order</button>
+  <button type="submit" onclick="handleOrderSubmit()">Submit Order</button>
 </form>
 
 
@@ -452,5 +452,6 @@ function handleOrderSubmit(event) {
 
 </body>
 </html>
+
 
 
